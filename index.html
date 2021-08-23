@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sport Landing Page</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">Sport</h2>
+            <div class="toggle"></div>
+        </header>
+        <div class="climbing-section">
+            <video class="sportvideo" src="pexels-grisha-grishkoff-5963543.mov" muted loop autoplay></video>
+
+            <div class="overlay"></div>
+
+            <div class="text">
+                <h2 class="heading">Rock</h2>
+                <h3 class="heading-2">Climbing</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam, quaerat quos, deserunt rem, iusto nihil harum eos tenetur consequuntur dignissimos voluptatum earum laudantium aperiam soluta architecto error voluptas beatae?</p>
+                <a href="#">Explore</a>
+            </div>
+
+            <ul class="social">
+                <li><a href="#"><img src="facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="golf-section hidden">
+            <video class="sportvideo" src="Multiple Panning shots of a Golf Course.mp4" muted loop autoplay></video>
+
+            <div class="overlay"></div>
+
+            <div class="text">
+                <h2 class="heading">Golf</h2>
+                <h3 class="heading-2">Escape to the Links</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam, quaerat quos, deserunt rem, iusto nihil harum eos tenetur consequuntur dignissimos voluptatum earum laudantium aperiam soluta architecto error voluptas beatae?</p>
+                <a href="#">Explore</a>
+            </div>
+
+            <ul class="social">
+                <li><a href="#"><img src="facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="hiking-section hidden">
+            <video class="sportvideo" src="pexels-vitaliy-todo-8486373.mp4" muted loop autoplay></video>
+
+            <div class="overlay"></div>
+
+            <div class="text">
+                <h2 class="heading">Hiking</h2>
+                <h3 class="heading-2">Hit the Trails</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam, quaerat quos, deserunt rem, iusto nihil harum eos tenetur consequuntur dignissimos voluptatum earum laudantium aperiam soluta architecto error voluptas beatae?</p>
+                <a href="#">Explore</a>
+            </div>
+
+            <ul class="social">
+                <li><a href="#"><img src="facebook.png" alt=""></a></li>
+                <li><a href="#"><img src="twitter.png" alt=""></a></li>
+                <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="menu">
+        <ul class="change-sport">
+            <li><a href="#" class="climbing">Rock Climbing</a></li>
+            <li><a href="#" class="golf">Golf</a></li>
+            <li><a href="#">Snowboarding</a></li>
+            <li><a href="#" class="hiking">Hiking</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+        const climbingBtn = document.querySelector('.climbing')
+        const golfBtn = document.querySelector('.golf')
+        const hikingBtn = document.querySelector('.hiking')
+        const climbing = document.querySelector('.climbing-section')
+        const golf = document.querySelector('.golf-section')
+        const hiking = document.querySelector('.hiking-section')
+        
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        });
+
+        golfBtn.addEventListener('click', () => {
+            hiking.classList.add('hidden');
+            climbing.classList.add('hidden');
+            golf.classList.remove('hidden');
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        });
+
+        climbingBtn.addEventListener('click', () => {
+            golf.classList.add('hidden');
+            hiking.classList.add('hidden');
+            climbing.classList.remove('hidden');
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        });
+
+        hikingBtn.addEventListener('click', () => {
+            climbing.classList.add('hidden');
+            golf.classList.add('hidden');
+            hiking.classList.remove('hidden');
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        });
+        
+
+    </script>
+</body>
+</html>
